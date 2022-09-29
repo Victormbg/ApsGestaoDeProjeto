@@ -40,31 +40,39 @@
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">
-                                <div class="modal-content">
+                                <div class="modal-content" style="background-color: #312a41;">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Criar conta</h5>
+                                        <h5 class="modal-title textcriarconta" id="exampleModalLabel">Criar conta</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                            <label for="exampleFormControlInput1" class="form-label labeltext">Email</label>
                                             <input type="email" class="form-control" id="exampleFormControlInput1"
                                                 placeholder="name@example.com" required>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="inputPassword" class="form-label">Password</label>
-                                            <input type="password" class="form-control" id="inputPassword">
+                                            <label for="inputPassword" class="form-label labeltext">Password</label>
+                                            <input type="password" placeholder="*********" class="form-control" id="inputPassword"required>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="inputPassword" class="form-label">Confirmar Password</label>
-                                            <input type="password" class="form-control" id="inputPassword">
+                                            <label for="inputPassword" class="form-label labeltext">Confirmar Password</label>
+                                            <input type="password" class="form-control" placeholder="*********" id="inputPassword">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="inputNome" class="form-label labeltext">Nome Completo</label>
+                                            <input type="text" class="form-control"  id="inputNome">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="inputTelefone" class="form-label labeltext">Telefone</label>
+                                            <input type="text" class="form-control" placeholder="(xx) xxxxxxxxxx" id="inputTelefone">
                                         </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Fechar</button>
-                                        <button type="submit" class="btn btn-primary">Criar</button>
+                                        <button type="submit" style="background-color: rebeccapurple;" class="btn btn-primary">Criar</button>
                                     </div>
                                 </div>
                             </div>
