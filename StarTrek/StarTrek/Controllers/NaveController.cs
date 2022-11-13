@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StarTrek.Data;
-using StarTrek.Models;
 
 namespace StarTrek.Controllers
 {
@@ -14,7 +13,7 @@ namespace StarTrek.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Nave> objNaveList = _db.Naves.ToList();
+            var objNaveList = _db.Naves.ToList();
             return View();
         }
     }
