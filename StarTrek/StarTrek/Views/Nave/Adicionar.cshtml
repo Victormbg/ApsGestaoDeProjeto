@@ -1,0 +1,47 @@
+﻿@model Nave
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h1>Adicionar Nave</h1>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Nome"></label>
+            <input asp-for="Nome" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Afiliacao"></label>
+            <input asp-for="Afiliacao" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Classe"></label>
+            <input asp-for="Classe" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="DataLancamento"></label>
+            <input asp-for="DataLancamento" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Registro"></label>
+            <input asp-for="Registro" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Status"></label>
+            <input asp-for="Status" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Propulsao"></label>
+            <input asp-for="Propulsao" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Armamento"></label>
+            <input asp-for="Armamento" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Defesa"></label>
+            <input asp-for="Defesa" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Adicionar</button>
+        <a asp-controller="Nave" asp-action="Index" class="btn btn-dark">Voltar</a>
+    </div>
+</form>
