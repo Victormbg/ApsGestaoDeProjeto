@@ -27,9 +27,16 @@ namespace StarTrek.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Adicionar(Nave obj)
         {
-            _db.Naves.Add(obj);
-            _db.SaveChanges();
-            return RedirectToAction("Index");
+            if(ModelState.IsValid)
+            {
+                _db.Naves.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(obj);
+            }
         }
     }
 }
