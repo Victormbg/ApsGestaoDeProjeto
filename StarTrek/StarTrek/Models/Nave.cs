@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace StarTrek.Models
 {
@@ -10,6 +11,7 @@ namespace StarTrek.Models
         public string Nome { get; set; }
         public string Afiliacao { get; set; }
         public string Classe { get; set; }
+        [DisplayName("Data de lançamento")]
         public DateTime DataLancamento { get; set; }
         public string Registro { get; set; }
         public string Status { get; set; }
