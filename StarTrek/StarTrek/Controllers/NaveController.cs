@@ -27,7 +27,44 @@ namespace StarTrek.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Adicionar(Nave obj)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
+            {
+                _db.Naves.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(obj);
+            }
+        }
+
+        // GET
+        public IActionResult Editar(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var naveFromDb = _db.Naves.Find(id);
+                if (naveFromDb == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    return View(naveFromDb);
+                }
+            }
+        }
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Editar(Nave obj)
+        {
+            if (ModelState.IsValid)
             {
                 _db.Naves.Add(obj);
                 _db.SaveChanges();
