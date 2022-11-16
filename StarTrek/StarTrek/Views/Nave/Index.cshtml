@@ -47,14 +47,10 @@
                 <td>@obj.Defesa</td>
                 <td>
                     <div class="btn-group">
-                        <a asp-controller="Nave" asp-action="Editar" asp-route-id="@obj.Id">
+                        <a class="btn btn-warning mx-1" asp-controller="Nave" asp-action="Editar" asp-route-id="@obj.Id">
                             <i class="bi bi-pencil-square"></i>
                         </a>
-                    </div>
-                </td>
-                <td>
-                    <div class="btn-group">
-                        <a asp-controller="Nave" asp-action="DeletarPost" asp-route-id="@obj.Id">
+                        <a class="btn btn-danger mx-1" asp-controller="Nave" asp-action="Deletar" asp-route-id="@obj.Id">
                             <i class="bi bi-trash-fill"></i>
                         </a>
                     </div>
