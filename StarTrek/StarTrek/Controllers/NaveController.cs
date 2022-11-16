@@ -75,5 +75,43 @@ namespace StarTrek.Controllers
                 return View(obj);
             }
         }
+
+        // GET
+        public IActionResult Deletar(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var naveFromDb = _db.Naves.Find(id);
+                if (naveFromDb == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    return View(naveFromDb);
+                }
+            }
+        }
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletarPost(int? id)
+        {
+            var obj = _db.Naves.Find(id);
+            if(obj == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                _db.Naves.Remove(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+        }
     }
 }
