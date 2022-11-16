@@ -66,7 +66,7 @@ namespace StarTrek.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Naves.Add(obj);
+                _db.Naves.Update(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
